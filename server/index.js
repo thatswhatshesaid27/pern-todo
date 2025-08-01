@@ -31,7 +31,7 @@ app.get("/todos/:id", async(req,res)=>{
     }
 })
 
-//update a todo
+//update
 app.put("/todos/:id", async(req,res)=>{
     try {
         const {id}=req.params;
@@ -46,7 +46,7 @@ app.put("/todos/:id", async(req,res)=>{
 })
 
 
-//delete a todo
+//delete
 
 app.delete("/todos/:id", async(req,res)=>{
     try {
@@ -67,7 +67,7 @@ app.post("/todos", async (req, res) => {
             "INSERT INTO todo (description) VALUES ($1) RETURNING *",
             [description]
         );
-        res.json(newTodo.rows[0]); // Return the inserted row
+        res.json(newTodo.rows[0]); 
     } catch (error) {
         console.error(error.message);
         res.status(500).send("Server Error");
