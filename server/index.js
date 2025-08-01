@@ -7,6 +7,10 @@ const pool = require("./db");
 app.use(cors());
 app.use(express.json());
 
+app.get("/", (req, res) => {
+  res.send("PERN Todo API is running");
+});
+
 //get method
 app.get("/todos", async (req, res) => {
     try {
