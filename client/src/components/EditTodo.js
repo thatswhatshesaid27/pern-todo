@@ -8,7 +8,7 @@ const EditTodo = ({ todo }) => {
   const editTodo = async (id) => {
     try {
       const body = { description };
-      const res = await fetch(`http://localhost:5000/todos/${id}`, {
+      const res = await fetch(`https://pern-todo-3.onrender.com/todos/${id}`, {
         method: "PUT",
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(body),

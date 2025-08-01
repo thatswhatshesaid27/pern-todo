@@ -7,7 +7,7 @@ const ListTodo = () => {
   // Fetch
   const getTodo = async () => {
     try {
-      const res = await fetch("http://localhost:5000/todos");
+      const res = await fetch("https://pern-todo-3.onrender.com/todos");
       const todosArray = await res.json();
 
       if (Array.isArray(todosArray)) {
@@ -23,7 +23,7 @@ const ListTodo = () => {
   // Delete
   const deleteTodo = async (id) => {
     try {
-      await fetch(`http://localhost:5000/todos/${id}`, {
+      await fetch(`https://pern-todo-3.onrender.com/${id}`, {
         method: "DELETE",
       });
 
