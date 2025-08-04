@@ -23,7 +23,7 @@ const ListTodo = () => {
   // Delete
   const deleteTodo = async (id) => {
     try {
-      await fetch(`https://pern-todo-3.onrender.com/${id}`, {
+      await fetch(`https://pern-todo-3.onrender.com/todos/${id}`, {
         method: "DELETE",
       });
 
